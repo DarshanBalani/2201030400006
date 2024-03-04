@@ -1,0 +1,158 @@
+<!-- explore.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-+3oZNPqzM2KdwwhHA5FqKZ7u9E/w5l1pRcYDe20OKg2cG21XMtad8VYzJHun0m5qd6B2N5F3ZL+X5NjeZChCH5A=="
+        crossorigin="" />
+    <title>Explore Museums</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Virtual Museum Tours</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore Museums</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="museum-categories">
+        <div class="container">
+            <h2>Museum Categories</h2>
+
+            <!-- Category 1 -->
+            <div class="category-card">
+                <h3>Art Museums</h3>
+                <p>Explore the world of fine arts, paintings, sculptures, and more.</p>
+                <a href="art-museums.html">View Museums</a>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="category-card">
+                <h3>History Museums</h3>
+                <p>Travel back in time and discover historical artifacts and exhibits.</p>
+                <a href="history-museums.html">View Museums</a>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="category-card">
+                <h3>Science and Technology Museums</h3>
+                <p>Explore the wonders of science, technology, and innovation.</p>
+                <a href="science-museums.html">View Museums</a>
+            </div>
+
+            <!-- Add more categories as needed -->
+        </div>
+    </section>
+
+    <section class="interactive-map">
+        <div class="container">
+            <h2>Interactive Map</h2>
+            <div id="map" style="height: 400px;"></div>
+
+            <!-- Include Leaflet.js library -->
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                integrity="sha512-c8pXFE6zOvTu9GFAi6jQrO8FXAGy7wOVdLyoK4kZOP56B/3DpQ7WKEXAIDyq3vS8Jwqo4PkUK27UjZ5se5CfEAg=="
+                crossorigin=""></script>
+
+            <script>
+                // Initialize the map
+                var map = L.map('map').setView([51.505, -0.09], 13);
+
+                // Add the OpenStreetMap tile layer
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+            </script>
+        </div>
+    </section>
+
+    <section class="featured-exhibits">
+        <div class="container">
+            <h2>Featured Exhibits</h2>
+
+            <!-- Exhibit 1 -->
+            <div class="exhibit-card">
+                <h3>The Art of Nature</h3>
+                <p>Immerse yourself in the beauty of nature through breathtaking artworks that capture the essence of
+                    the natural world.</p>
+            </div>
+
+            <!-- Exhibit 2 -->
+            <div class="exhibit-card">
+                <h3>Ancient Civilizations Unveiled</h3>
+                <p>Step back in time and explore the mysteries and achievements of ancient civilizations through
+                    intriguing exhibits and artifacts.</p>
+            </div>
+
+            <!-- Add more exhibits as needed -->
+
+        </div>
+    </section>
+
+    <!-- Museum Details -->
+    <section class="museum-details">
+        <div class="container">
+            <h2>Featured Museums</h2>
+
+            <!-- Museum 1 -->
+            <div class="museum-card">
+                <h3>National Gallery of Art</h3>
+                <p>The National Gallery of Art, located in Washington, D.C., is a world-renowned art museum featuring an
+                    extensive collection of European and American art. Explore masterpieces from the Renaissance to
+                    contemporary works.</p>
+                <a href="national-gallery.html">Learn More</a>
+            </div>
+
+            <!-- Museum 2 -->
+            <div class="museum-card">
+                <h3>Louvre Museum</h3>
+                <p>The Louvre Museum in Paris is one of the largest and most visited art museums in the world. Immerse
+                    yourself in the rich history of art, housing thousands of works, including the Mona Lisa and the
+                    Venus de Milo.</p>
+                <a href="louvre-museum.html">Learn More</a>
+            </div>
+
+            <!-- Museum 3 -->
+            <div class="museum-card">
+                <h3>The State Hermitage Museum</h3>
+                <p>The Hermitage in Saint Petersburg, Russia, is renowned for its vast collection of art and cultural
+                    artifacts. Discover the treasures housed in the Winter Palace.</p>
+                <a href="hermitage-museum.html">Learn More</a>
+            </div>
+
+            <!-- Add more museum cards as needed -->
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore Museums</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2024 Virtual Museum Tours</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
